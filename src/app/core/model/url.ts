@@ -7,6 +7,7 @@ export class Url {
       totalClicks!: number;
       originalUrl!: string;
       shortenedUrl!: string;
+      createdIn!: Date;
 
       constructor(data: any) {
 

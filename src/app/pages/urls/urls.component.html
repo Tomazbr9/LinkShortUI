@@ -70,20 +70,7 @@
                 </div>
                 
                 <!-- Actions -->
-                <div class="flex items-center space-x-3">
-                    <button 
-                        id="selectAllBtn"
-                        class="px-4 py-2 text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
-                    >
-                        Selecionar Todos
-                    </button>
-                    <button 
-                        id="deleteSelectedBtn"
-                        class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                        disabled
-                    >
-                        Deletar Selecionados
-                    </button>
+                <div class="flex items-center space-x-4">
                     <a routerLink="/" class="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all">
                         + Nova URL
                     </a>
@@ -102,7 +89,7 @@
                         <div class="flex items-start justify-between mb-3">
                             <div class="flex-1">
                                 <h3 class="text-lg font-semibold text-gray-800 mb-1">{{url.urlName}}</h3>
-                                <p class="text-sm text-gray-500 mb-2">Criado em 13 de Nov, 2024</p>
+                                <p class="text-sm text-gray-500 mb-2">Criado em {{ url.createdIn | date:"d 'de' MMMM 'de' y"}}</p>
                             </div>
                             <div class="flex items-center space-x-2">
                                 <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">
