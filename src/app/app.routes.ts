@@ -6,6 +6,11 @@ export const routes: Routes = [
 
       {
             path: '',
+            loadComponent: () => import('./pages/landing-page/landing-page.component').then(m => m.LandingPageComponent),
+      },
+
+      {
+            path: 'home',
             loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
             canActivate: [AuthGuard],
       },
