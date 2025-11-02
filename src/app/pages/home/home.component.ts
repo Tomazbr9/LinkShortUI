@@ -16,6 +16,8 @@ export class HomeComponent implements OnInit {
 
   urlForm: FormGroup;
 
+  errorMessage: string = '';
+
   urlShortend: String = '';
 
   constructor(private urlService: UrlService){
@@ -41,7 +43,16 @@ export class HomeComponent implements OnInit {
           this.urlForm.reset();
           this.urlShortend = url.shortenedUrl;
         },
-        error: (err) => console.error('Erro ao criar URL encurtada:', err)   
+        error: (err) => {
+          console.error('Erro ao criar URL encurtada:', err)
+          if (err.error && typeof err.error === 'object') {
+            Object.entries(err.error).forEach(([field, message]) => {
+              if (this.urlForm.get(field)) {
+                this.urlForm.get(field)?.setErrors({ serverError: message });
+              }
+            });
+          }
+        }
       })
     }
   }

@@ -3,10 +3,14 @@ import { HttpClient } from "@angular/common/http";
 import {Observable, tap} from "rxjs";
 import { User } from "../model/user";
 import { LoginResponse } from "../interface/loginResponse";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
     private apiUrl = 'http://localhost:8080/v1/auth';
+
+    private authStatus = new BehaviorSubject<boolean>(this.isAuthenticated());
+    authStatus$ = this.authStatus.asObservable();
 
     constructor(private http: HttpClient){}
 
@@ -16,6 +20,7 @@ export class AuthService {
         ).pipe(
             tap(response => {
                 localStorage.setItem('access_token', response.token);
+                this.authStatus.next(true);
             })
         )
     }
@@ -26,6 +31,7 @@ export class AuthService {
     }
 
     logout(): void {
+        this.authStatus.next(false);
         localStorage.removeItem('access_token');
     }
 

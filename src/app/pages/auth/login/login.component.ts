@@ -32,7 +32,7 @@ export class LoginComponent {
 
     if(this.loginForm.valid){
       this.authService.login(this.loginForm.value).subscribe({
-        next: () => this.router.navigate(['/']),
+        next: () => this.router.navigate(['/home']),
         error: (err) => this.errorMessage = 'Usuário ou senha inválidos'
       });
     }

@@ -18,21 +18,25 @@ export class AppComponent implements OnInit {
   isAuthenticated: boolean = false;
 
   constructor(
-    private AuthService: AuthService,
+    private authService: AuthService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
+
+    this.authService.authStatus$.subscribe(status => {
+      this.isAuthenticated = status;
+    });
     
     this.checkAuthentication();
   }
 
   checkAuthentication(): void {
-    this.isAuthenticated = this.AuthService.isAuthenticated();
+    this.isAuthenticated = this.authService.isAuthenticated();
   }
 
   logout(): void {
-    this.AuthService.logout();
+    this.authService.logout();
     this.checkAuthentication();
     this.router.navigate(['/login']);
 
