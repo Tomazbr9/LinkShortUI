@@ -7,10 +7,10 @@ Desenvolvido com **Angular + TypeScript**, ele oferece uma interface intuitiva, 
 
 ## Tecnologias Utilizadas
 
-- **Angular** (Framework principal)
+- **Angular 19** (Framework principal)
 - **TypeScript**
-- **RxJS** e **Angular Services** para comunicação com o backend
-- **TailwindCss / Angular Material** (design e responsividade)
+- **RxJS 7.8.0** e **Angular Services** para comunicação com o backend
+- **TailwindCss 3.4.17 / Angular Material** (design e responsividade)
 - **JWT** para autenticação
 
 ---
@@ -29,9 +29,9 @@ Desenvolvido com **Angular + TypeScript**, ele oferece uma interface intuitiva, 
 
 Abaixo estão algumas capturas de tela da interface do **LinkShortUi**:
 
-| Tela de Login | Dashboard | Criação de Link |
+| Tela de Login | Home | Criação de Link |
 |:--------------:|:----------:|:----------------:|
-| ![Tela de Login](docs/images/tela_de_login.png) | ![Home](docs/images/home.png.png) | ![Lista de Urls Criadas](docs/images/tela_de_listas_de_urls.png.png) |
+| ![Tela de Login](docs/images/tela_de_login.png) | ![Home](docs/images/home.png) | ![Lista de Urls Criadas](docs/images/tela_de_listas_de_urls.png) |
 
 ---
 
@@ -55,7 +55,7 @@ Abaixo estão algumas capturas de tela da interface do **LinkShortUi**:
 
 ---
 
-## 🔗 Integração com o Backend
+## Integração com o Backend
 
 O **LinkShortUi** se comunica com o backend do projeto **LinkShort** através de requisições HTTP autenticadas com **JWT**.
 
@@ -63,7 +63,7 @@ Certifique-se de que o backend esteja em execução antes de iniciar o frontend.
 
 ---
 
-## 📘 Documentação da API (Swagger / OpenAPI)
+## Documentação da API (Swagger / OpenAPI)
 
 A documentação da API do **LinkShort** foi gerada com **Swagger (OpenAPI)** e está disponível diretamente no backend.
 
