@@ -2,21 +2,23 @@ import { Component } from '@angular/core';
 import { FormGroup, ReactiveFormsModule, Validators, FormControl } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../../core/service/auth.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { SnackbarService } from '../../../core/service/snackBar.service';
 
 @Component({
   selector: 'app-register',
   imports: [
     ReactiveFormsModule,
-    CommonModule
-  ],
+    CommonModule,
+    RouterLink
+],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
   registerForm: FormGroup;
   
+  messageError: string = '';
   
   constructor(
     private snackBarService: SnackbarService,
@@ -25,7 +27,6 @@ export class RegisterComponent {
   ){
     this.registerForm = new FormGroup({
       username: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required]),
     });
   }
@@ -42,6 +43,7 @@ export class RegisterComponent {
         },
         error: (err) => {
           console.error('Erro ao registrar usuário:', err);
+          this.messageError = err.error?.message || 'Erro ao registrar usuário. Por favor, tente novamente.';
         }
       });
     }

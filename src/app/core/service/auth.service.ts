@@ -7,7 +7,7 @@ import { BehaviorSubject } from "rxjs";
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-    private apiUrl = 'http://localhost:8080/v1/auth';
+    private apiUrl = 'http://localhost:8080/api/auth';
 
     private authStatus = new BehaviorSubject<boolean>(this.isAuthenticated());
     authStatus$ = this.authStatus.asObservable();
@@ -25,9 +25,9 @@ export class AuthService {
         )
     }
 
-    register(user: User): Observable<string> {
+    register(user: User): Observable<any> {
         const body = { ...user, role: 'ROLE_USER' };
-        return this.http.post(`${this.apiUrl}/register`, body, { responseType: 'text' });
+        return this.http.post(`${this.apiUrl}/register`, body);
     }
 
     logout(): void {

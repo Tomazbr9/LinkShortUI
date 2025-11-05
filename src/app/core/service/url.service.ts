@@ -8,7 +8,7 @@ import { patchUrlRequest } from '../interface/patchUrlRequest';
 @Injectable({ providedIn: 'root' })
 export class UrlService {
 
-      apiUrl = 'http://localhost:8080/v1/url';
+      apiUrl = 'http://localhost:8080/api/url';
 
       constructor(private http: HttpClient) { }
 
