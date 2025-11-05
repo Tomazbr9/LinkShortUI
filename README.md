@@ -1,59 +1,90 @@
-# MinimoUI
+# LinkShortUi – Interface Web (Frontend)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+O **LinkShortUi** é o frontend do projeto **LinkShort**, um encurtador de URLs moderno e eficiente.  
+Desenvolvido com **Angular + TypeScript**, ele oferece uma interface intuitiva, responsiva e totalmente integrada ao backend.
 
-## Development server
+---
 
-To start a local development server, run:
+## Tecnologias Utilizadas
 
-```bash
-ng serve
-```
+- **Angular** (Framework principal)
+- **TypeScript**
+- **RxJS** e **Angular Services** para comunicação com o backend
+- **TailwindCss / Angular Material** (design e responsividade)
+- **JWT** para autenticação
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## Funcionalidades
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- 🔗 Criação e gerenciamento de URLs encurtadas  
+- 📊 Dashboard com estatísticas de acessos  
+- 🔐 Autenticação e controle de usuários (JWT)  
+- 🧭 Navegação moderna e responsiva  
+- 🎨 Design limpo e profissional  
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Prévia da Interface
 
-```bash
-ng generate --help
-```
+Abaixo estão algumas capturas de tela da interface do **LinkShortUi**:
 
-## Building
+| Tela de Login | Dashboard | Criação de Link |
+|:--------------:|:----------:|:----------------:|
+| ![Tela de Login](docs/images/tela_de_login.png) | ![Home](docs/images/home.png.png) | ![Lista de Urls Criadas](docs/images/tela_de_listas_de_urls.png.png) |
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## Como Executar Localmente
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+1. **Clonar o repositório**
+   ```bash
+   git clone https://github.com/seu-usuario/LinkShortUi.git
 
-## Running unit tests
+2. **Instalar as dependências**
+   ```bash   
+   npm install
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+3. **Executar o servidor de desenvolvimento**
+   ```bash 
+   ng serve
 
-```bash
-ng test
-```
+4. **Abrir no navegador**
+   ```bash 
+   http://localhost:4200
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 🔗 Integração com o Backend
 
-```bash
-ng e2e
-```
+O **LinkShortUi** se comunica com o backend do projeto **LinkShort** através de requisições HTTP autenticadas com **JWT**.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Certifique-se de que o backend esteja em execução antes de iniciar o frontend.  
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📘 Documentação da API (Swagger / OpenAPI)
+
+A documentação da API do **LinkShort** foi gerada com **Swagger (OpenAPI)** e está disponível diretamente no backend.
+
+Para acessá-la:
+
+http://localhost:8080/swagger-ui/index.html
+
+*(O endereço pode variar conforme a configuração do seu ambiente.)*
+
+---
+
+## 📄 Licença
+
+Este projeto é distribuído sob a licença **MIT**.  
+Sinta-se à vontade para usar, modificar e contribuir!
+
+
+## Contato
+
+Desenvolvido por **[Bruno Tomaz]**  
+📧 Email: [brunotomaaz@yahoo.com](mailto:seu.email@exemplo.com)  
+🌐 Linkedin: [Bruno Tomaz](https://www.linkedin.com/in/bruno-tomaz-5232451b2/)
+
+
