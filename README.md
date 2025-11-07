@@ -29,7 +29,7 @@ Desenvolvido com **Angular + TypeScript**, ele oferece uma interface intuitiva, 
 
 Abaixo estão algumas capturas de tela da interface do **LinkShortUi**:
 
-| Tela de Login | Home | Criação de Link |
+| Tela de Login | Home | Lista de URLs encurtadas |
 |:--------------:|:----------:|:----------------:|
 | ![Tela de Login](docs/images/tela_de_login.png) | ![Home](docs/images/home.png) | ![Lista de Urls Criadas](docs/images/tela_de_listas_de_urls.png) |
 
