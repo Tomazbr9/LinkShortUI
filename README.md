@@ -53,6 +53,28 @@ Abaixo estão algumas capturas de tela da interface do **LinkShortUi**:
    ```bash 
    http://localhost:4200
 
+Se preferir, você pode rodar o projeto facilmente usando o **Docker**, sem precisar instalar o Angular ou Node.js localmente.
+
+1. **Construir a imagem Docker**
+
+   ```bash
+   docker build -t linkshort-ui .
+   ```
+
+2. **Executar o container**
+
+   ```bash
+   docker run -d -p 4200:80 linkshort-ui
+   ```
+
+3. **Acessar no navegador**
+
+   ```
+   http://localhost:4200
+   ```
+
+---
+
 ---
 
 ## Integração com o Backend
